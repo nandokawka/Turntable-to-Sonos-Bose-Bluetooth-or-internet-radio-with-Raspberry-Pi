@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  record-stream:
+    image: record.stream:0.1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    devices:
+      - /dev/snd:/dev/snd
+    volumes:
+      - ./config/icecast.xml:/etc/icecast.xml
+      - ./config/darkice.cfg:/etc/darkice.cfg
+
