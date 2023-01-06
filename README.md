@@ -28,6 +28,8 @@ smartphone.
 The numbering of the audio devices is not deterministic and changes randomly
 after a restart.
 
+## Table of Contents
+
 [[_TOC_]]
 
 ## Setup and configuration
