@@ -22,7 +22,7 @@ smartphone.
 2. Start docker container.
 
    ```bash
-   sudo docker compose run --entrypoint "aplay -l" record-stream
+   sudo docker compose up
    ```
 
 The numbering of the audio devices is not deterministic and changes randomly
@@ -83,11 +83,6 @@ To create a similar set you need to complete the following steps.
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
 
-####
-
-#####
-
-
 ### Persistent audio device number
 
 As alsa is indexing the available audio devices randomly on every reboot. In order to configure the record streamer correctly we need to make the assigned number of our audio interface persistent. This can be done in various ways as described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page) for arch linux. The following command lists the loaded audio kernel modules.
@@ -100,6 +95,10 @@ With this information you can configure the card index in a persistent way by ad
 
 ```bash
 options snd_usb_audio index=3
+```
+
+```bash
+sudo docker compose run --entrypoint "aplay -l" record-stream
 ```
 
 [*Add an Internet radio station to
