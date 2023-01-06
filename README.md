@@ -43,7 +43,7 @@ allows you to listen to your records on any connected bluetooth speakers.
 
 ### Setup overview
 
-![](./docs/diagram/../diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png)
+![](./docs/diagram/diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png)
 
 ### Persistent audio device number
 
