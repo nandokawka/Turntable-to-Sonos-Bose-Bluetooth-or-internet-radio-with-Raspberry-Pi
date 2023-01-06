@@ -37,9 +37,9 @@ after a restart.
 The audio hardware in the households changes drastically and makes use of
 technologies like bluetooth or wireless streaming. This goes along with the
 removal of physical connectors on the audio devices. As a consequence it becomes
-harder if not impossible at the first glimpse to listen to your records on playback devices in your household. This project tackles this problem with the
-help of a docker container that creates a live internet radio stream in the
-local network from the current playing record. This internet radio stream can be consumed by any internet radio compatible device in the
+harder if not impossible at the first glimpse to listen to your records on playback devices in your household. This project tackles the problem with the
+the creation of a live internet radio stream in the
+local network from the current playing record. The internet radio stream can be consumed by any internet radio compatible device in the
 network. E.g. you can add the created internet radio stream to your smart home
 audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home
 Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
@@ -49,11 +49,12 @@ any other bluetooth sound system or computer.
 
 There are already a couple of projects describing a similar approach [see
 section Inspiration](###inspiration). This project attempts to simplify the
-setup of such an internet streaming service. Through the dockerization the
-resilience is increased.
+setup of such an internet streaming service. Additionally the reilience is
+increased through dockerization.  
 The presented solution doesn't claim to be the audiophile's choice. Nevertheless
-it creates a suitable solution for a growing problem of connectivity problems.
-It is also an alternative for expensive solutions like the [Sonos
+it creates a suitable solution for the growing connectivity problems with modern
+audio systems.  
+It can also be an alternative for expensive solutions like the [Sonos
 Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](Bose
 Music Amplifier).
 
