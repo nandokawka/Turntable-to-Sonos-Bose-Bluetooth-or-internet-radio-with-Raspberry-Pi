@@ -14,7 +14,7 @@ with Diagram('\nSetup of Turntable to Sonos or Web Radio with Raspberry Pi', sho
     Node("", shape="plaintext", pin="true", pos="19.5,5.5")
     record_player = Custom("Record player", "./png/schallplattenspieler.png", pin="true", pos="1,3")
     audio_device = Custom("Audio device", "./png/usb.png", pin="true", pos="5,3")
-    audio = Custom("Smartphone", "./png/audio.png", pin="true", pos="16,3")
+    audio = Custom("App", "./png/audio.png", pin="true", pos="16,3")
     sonos = Custom("Sonos System", "./png/speaker.png", pin="true", pos="19,5")
     speaker = Custom("BT Speaker", "./png/speaker.png", pin="true", pos="19,3")
     laptop = Custom("Laptop", "./png/laptop.png", pin="true", pos="19,1")
