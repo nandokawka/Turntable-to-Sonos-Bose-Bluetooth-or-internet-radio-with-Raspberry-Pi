@@ -4,6 +4,7 @@ from diagrams.custom import Custom
 graph_attr = {
   "splines": "curved",
   "layout": "neato",
+  "margin":"-2, -2"
 }
 
 with Diagram('\nSetup of Turntable to Sonos or Web Radio with Raspberry Pi', show=True, graph_attr=graph_attr) as diag:
