@@ -1,7 +1,11 @@
 # Turntable to Smart Home Audio (Sonos, Bose) or internet radio with Raspberry Pi
 
 Create a internet radio stream that allows for streaming your records to your Sonos
-or any other internet radio endpoint like e.g. the TuneIn App on your smartphone.
+or any other internet radio endpoint like e.g. the TuneIn App on your
+smartphone.
+
+![architecture](./docs/diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
+"Architecture")
 
 ## TLDR
 
@@ -59,9 +63,6 @@ audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio]
    3. [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
-
-![architecture](./docs/diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
-"Architecture")
 
 The pipeline begins with the record player which is connected to the USB audio
 interface. The analog signal from the current playing record travels through USB
