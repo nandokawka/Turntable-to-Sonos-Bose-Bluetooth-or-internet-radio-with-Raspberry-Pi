@@ -34,6 +34,6 @@ with Diagram('\nSetup of Turntable to Sonos or Web Radio with Raspberry Pi', sho
   # Edge(headlabel="analog audio signal", labelangle="0", labeldistance="14", constraint="False") >> audio_device
   audio_device >> darkice
   darkice >>  Edge(label="encoded audio") >> icecast
-  icecast >> Edge(label="mp3 stream") >> audio
+  icecast >> Edge(label="internet\nradio stream") >> audio
   audio >> [sonos, laptop, speaker]
   
