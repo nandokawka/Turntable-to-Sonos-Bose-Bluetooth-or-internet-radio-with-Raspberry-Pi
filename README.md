@@ -287,9 +287,9 @@ restarts anytime the host system is restarted.
 
 ### Icons used
 
-<a href="https://www.flaticon.com/de/kostenlose-icons/vinyl" title="vinyl Icons">Vinyl Icons erstellt von Pavel Kozlov - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/speaker" title="speaker icons">Speaker icons created by Smashicons - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/raspberry-pi" title="Raspberry Pi icons">Raspberry Pi icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop
+* <a href="https://www.flaticon.com/de/kostenlose-icons/vinyl" title="vinyl Icons">Vinyl Icons erstellt von Pavel Kozlov - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/speaker" title="speaker icons">Speaker icons created by Smashicons - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/raspberry-pi" title="Raspberry Pi icons">Raspberry Pi icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop
 icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/audio" title="audio icons">Audio icons created by Andrejs Kirma - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/audio" title="audio icons">Audio icons created by Andrejs Kirma - Flaticon</a>
