@@ -174,21 +174,48 @@ randomly on every reboot. In order to make the system reliable we need to make
 the numbering  audio interface persistent. This can be done in various ways as
 described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page)
 for arch linux. One approach to resolve this is to set the card number
-explicitly in the alsa configuration with the help of the kernel modules. The following command lists the loaded audio kernel modules.
+explicitly in the alsa configuration with the help of the kernel modules.To
+determine the kernel module used by the audio device the record player is
+connected to follow the steps described below:
 
-```bash
-lsmod | grep snd
-```
+1. Unplug the audio device.
+2. Restart the Raspberry Pi.
+3. List kernel modules. They are listed in the first column of output.
 
-With this information you can configure the card index in a persistent way by adding the file `/etc/modprobe.d/alsa-base.conf` and set the index of your desired module e.g.:
+   ```bash
+   lsmod | grep snd
+
+   # Example output
+   snd_bcm2835            28672  0
+   ```
+
+4. Connect the audio device.
+5. List the kernel modules again.
+
+   ```bash
+
+   # Example output
+   snd_usb_audio         319488  0
+   snd_usbmidi_lib        36864  1 snd_usb_audio
+   snd_hwdep              20480  1 snd_usb_audio
+   snd_rawmidi            45056  1 snd_usbmidi_lib
+   snd_bcm2835            28672  0
+   snd_seq_device         20480  1 snd_rawmidi
+   mc                     61440  4 videodev,snd_usb_audio,videobuf2_v4l2,videobuf2_common
+   ```
+
+I assumed that my audio device is using the module `snd_usb_audio`. For the sake
+of simplicity I configured alsa such that the audio device is the last card of
+the connected cards by editing `/etc/modprobe.d/alsa-base.conf` and set the
+index of the card using the module `snd_usb_audio` to 3:
 
 ```bash
 options snd_usb_audio index=3
 ```
 
-```bash
-sudo docker compose run --entrypoint "aplay -l" record-stream
-```
+The persistence of the card number can be tested by rebooting a couple of times
+and checking the numbering of the audio interface after each reboot with the
+command `sudo aplay -l`. 
 
 [*Add an Internet radio station to
 Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
