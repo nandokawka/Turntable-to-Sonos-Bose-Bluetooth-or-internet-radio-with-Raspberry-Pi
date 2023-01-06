@@ -4,7 +4,7 @@ Create a internet radio stream that allows for streaming your records to your So
 or any other internet radio endpoint like e.g. the TuneIn App on your
 smartphone.
 
-![architecture](./docs/diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
+![architecture](./img/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
 "Architecture")
 
 ## TLDR
@@ -265,7 +265,7 @@ restarts anytime the host system is restarted.
   e.g. `http://192.168.178.43:8000` to check if Icecast is up and running. Here
   you will also see information about your Darkice encoding.
 
-  ![Icecast interface](./docs/diagrams/png/icecast-interface.png "Icecast Interface")
+  ![Icecast interface](./img/icecast-interface.png "Icecast Interface")
 
 2. Try to listen to your local internet radio stream.
    1. Configure a web radio player and point it to your stream. Your Stream url
