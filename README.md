@@ -1,4 +1,6 @@
-# Record Stream
+# Turntable to Sonos or Webradio with Raspberry Pi
+
+Create a web radio stream that allows for streaming your records to your Sonos or any other web radio stream compatible endpoint in your network.
 
 ```bash
 sudo docker compose run --entrypoint "aplay -l" record-stream
