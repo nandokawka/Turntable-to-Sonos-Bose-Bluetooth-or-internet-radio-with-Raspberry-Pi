@@ -32,9 +32,7 @@ after a restart.
 
 [[_TOC_]]
 
-## Setup and configuration
-
-### Concept
+## Concept
 
 The audio hardware in the households changes drastically and makes use of
 technologies like bluetooth or wireless streaming. This goes along with the
@@ -47,7 +45,7 @@ audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home
 Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
 any other bluetooth sound system or computer.
 
-### Disclaimer
+## Disclaimer
 
 There are already a couple of projects describing a similar approach [see
 section Inspiration](###inspiration). This project attempts to simplify the
@@ -58,6 +56,8 @@ it creates a suitable solution for a growing problem of connectivity problems.
 It is also an alternative for expensive solutions like the [Sonos
 Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](Bose
 Music Amplifier).
+
+## Setup and configuration
 
 ### Architecture
 
