@@ -57,8 +57,8 @@ connection with an internet radio stream.
 To create a similar set you need to complete the following steps.
 
 1. [Organize Hardware](###hardware).
-2. Prepare Raspberry Pi.
-3. Make number of used audio interface persistent.
+2. [Prepare Raspberry Pi](###prepare-raspberry-pi).
+3. [Make number of used audio device persistent]().
 4. Install required software.
 5. Configure Darkice.
 
@@ -94,7 +94,7 @@ To create a similar set you need to complete the following steps.
    4. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
       (not tested).
    5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4)
-      (tested).
+      (tested).  
    **Comment:** I used arch linux for my setup as I like the rolling-release
    model. If you are new to linux and or to Raspberry Pi I would recommend to
    start with a debian based system (Raspbian, Debian, Ubuntu)
