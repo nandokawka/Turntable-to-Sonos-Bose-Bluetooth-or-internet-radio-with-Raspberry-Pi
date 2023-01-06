@@ -248,15 +248,15 @@ restarts anytime the host system is restarted.
   e.g. `http://192.168.178.43:8000` to check if Icecast is up and running. Here
   you will also see information about your Darkice encoding.
 
-  ![Icecast interface](docs/diagrams/png/icecast-interface.png "Icecast Interface")
+  ![Icecast interface](./docs/diagrams/png/icecast-interface.png "Icecast Interface")
 
 2. Try to listen to your local internet radio stream.
    1. Configure a web radio player and point it to your stream. Your Stream url
       is `http://<local ip address of raspberry pi>:8000/turntable.mp3`
   e.g. `http://192.168.178.43:8000/turntable.mp3` e.g.:
       1. [*Add an Internet radio station to Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
-      2. [*Add custom url to TuneIn](https://help.tunein.com/what-if-i-know-a-radio-stations-streaming-url-but-its-not-on-tunein-can-i-still-listen-to-it-HkOxgcC9OwM)
-   2. Start a record on your 
+      2. [*Add custom url to TuneIn*](https://help.tunein.com/what-if-i-know-a-radio-stations-streaming-url-but-its-not-on-tunein-can-i-still-listen-to-it-HkOxgcC9OwM)
+   2. Start a record on your turntable.
 
 ## Thanks to
 
