@@ -61,6 +61,8 @@ To create a similar set up the following steps need to be completed:
 3. [Install required software](###install-required-software).
 4. [Make number of used audio device persistent](###persistent-audio-device-number).
 5. [Configure Darkice](###configure-darkice).
+6. [Start the container](###start-container).
+7. [Test the internet radio stream](###test-the-internet-radio-stream)
 
 ### Hardware
 
@@ -159,7 +161,7 @@ The example output shows 4 audio cards available on my Raspberry Pi. Relevant
 for the internet radio stream program is `card 3` as it is the audio interface
 that is connected to the record player. Unlike `card 1` `card 3` has only one
 subdevice. Darkice can be configured to listen to `card 3`
-and `subdevice 0` by editing the line starting with `device` in `config/darkice.cfg` as followed:
+and `subdevice 0` by editing the line starting with `device` in `config/darkice.cfg`:
 
 ```cfg
 ...
@@ -215,10 +217,46 @@ options snd_usb_audio index=3
 
 The persistence of the card number can be tested by rebooting a couple of times
 and checking the numbering of the audio interface after each reboot with the
-command `sudo aplay -l`. 
+command `sudo aplay -l`. If your card number is always the same keep on with the
+configuration of Darkice.
 
-[*Add an Internet radio station to
-Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
+### Configure Darkice
+
+Now it is possible to configure Darkice such that it will keep functioning after
+restarts by editing `config/darkice.cfg`:
+
+```cfg
+...
+device          = plughw:3,0 # Audio device for the audio input
+...
+```
+
+### Start Container
+
+Last but not least the internet radio streaming container can be started:
+
+```bash
+sudo docker compose up
+```
+
+This will build the image and start the container. It is configured such that it
+restarts anytime the host system is restarted.
+
+### Test the internet radio stream
+
+1. Navigate with your browser to `http://<local ip address of raspberry pi>:8000`
+  e.g. `http://192.168.178.43:8000` to check if Icecast is up and running. Here
+  you will also see information about your Darkice encoding.
+
+  ![Icecast interface](docs/diagrams/png/icecast-interface.png "Icecast Interface")
+
+2. Try to listen to your local internet radio stream.
+   1. Configure a web radio player and point it to your stream. Your Stream url
+      is `http://<local ip address of raspberry pi>:8000/turntable.mp3`
+  e.g. `http://192.168.178.43:8000/turntable.mp3` e.g.:
+      1. [*Add an Internet radio station to Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
+      2. [*Add custom url to TuneIn](https://help.tunein.com/what-if-i-know-a-radio-stations-streaming-url-but-its-not-on-tunein-can-i-still-listen-to-it-HkOxgcC9OwM)
+   2. Start a record on your 
 
 ## Thanks to
 
