@@ -30,16 +30,11 @@ after a restart.
 The audio hardware in the households changes drastically and makes use of
 technologies like bluetooth or wireless streaming. This goes along with the
 removal of physical connectors on the audio devices. As a consequence it becomes
-harder if not impossible at the first glimpse to listen to your records on any
-playback device in your household. This project tackles this problem with the
-help of a docker container that records the audio coming in from the record
-player and creates a live internet radio stream from it in the local network. This
-internet radio stream can then be consumed by any internet radio compatible device in the
-network. E.g. you can add the created internet radio stream to your Sonos as
-described in the docs [*Add an Internet radio station to
-Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
-or add it to any other internet radio application on your smartphone. The latter one
-allows you to listen to your records on any connected bluetooth speakers.
+harder if not impossible at the first glimpse to listen to your records on playback devices in your household. This project tackles this problem with the
+help of a docker container that creates a live internet radio stream in the
+local network from the current playing record. This internet radio stream can be consumed by any internet radio compatible device in the
+network. E.g. you can add the created internet radio stream to your smart home
+audio system from Sonos of Bose as well as any other bluetooth sound system or computer.
 
 ### Architecture overview
 
@@ -90,6 +85,9 @@ With this information you can configure the card index in a persistent way by ad
 ```bash
 options snd_usb_audio index=3
 ```
+
+[*Add an Internet radio station to
+Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
 
 ## Thanks to
 
