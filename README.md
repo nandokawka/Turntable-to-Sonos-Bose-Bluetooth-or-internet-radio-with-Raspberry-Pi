@@ -60,6 +60,10 @@ allows you to listen to your records on any connected bluetooth speakers.
       App](https://apps.apple.com/de/app/sonos/id1488977981?l=en) (tested).
    2. Any Bluetooth speaker plus web radio app e.g.
       [TuneIn](https://tunein.com/) (tested) or similar.
+   3. [Bose Home
+      Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
+      tested) including [Bose Music
+      APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
 
 ![architecture](./docs/diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
 "Architecture")
