@@ -1,7 +1,7 @@
-# Turntable to Sonos or Web Radio with Raspberry Pi
+# Turntable to Sonos or internet radio with Raspberry Pi
 
-Create a web radio stream that allows for streaming your records to your Sonos
-or any other web radio endpoint like e.g. the TuneIn App on your smartphone.
+Create a internet radio stream that allows for streaming your records to your Sonos
+or any other internet radio endpoint like e.g. the TuneIn App on your smartphone.
 
 ## TLDR
 
@@ -33,12 +33,12 @@ removal of physical connectors on the audio devices. As a consequence it becomes
 harder if not impossible at the first glimpse to listen to your records on any
 playback device in your household. This project tackles this problem with the
 help of a docker container that records the audio coming in from the record
-player and creates a live web radio stream from it in the local network. This
-web radio stream can then be consumed by any web radio compatible device in the
-network. E.g. you can add the created web radio stream to your Sonos as
+player and creates a live internet radio stream from it in the local network. This
+internet radio stream can then be consumed by any internet radio compatible device in the
+network. E.g. you can add the created internet radio stream to your Sonos as
 described in the docs [*Add an Internet radio station to
 Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
-or add it to any other web radio application on your smartphone. The latter one
+or add it to any other internet radio application on your smartphone. The latter one
 allows you to listen to your records on any connected bluetooth speakers.
 
 ### Architecture overview
@@ -58,7 +58,7 @@ allows you to listen to your records on any connected bluetooth speakers.
 4. Audio System eg.:
    1. [Sonos](https://www.sonos.com/de-de/home) including [Sonos
       App](https://apps.apple.com/de/app/sonos/id1488977981?l=en) (tested).
-   2. Any Bluetooth speaker plus web radio app e.g.
+   2. Any Bluetooth speaker plus internet radio app e.g.
       [TuneIn](https://tunein.com/) (tested) or similar.
    3. [Bose Home
       Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
