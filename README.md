@@ -58,9 +58,9 @@ To create a similar set you need to complete the following steps.
 
 1. [Organize Hardware](###hardware).
 2. [Prepare Raspberry Pi](###prepare-raspberry-pi).
-3. [Make number of used audio device persistent]().
-4. Install required software.
-5. Configure Darkice.
+3. [Install required software](###install-required-software).
+4. [Make number of used audio device persistent](###persistent-audio-device-number).
+5. [Configure Darkice](###configure-darkice).
 
 ### Hardware
 
@@ -99,6 +99,8 @@ Install a linux operating system of you choice e.g.:
 **Comment:** I used arch linux for my setup as I like the rolling-release
    model. If you are new to linux and or to Raspberry Pi I would recommend to
    start with a debian based system (Raspbian, Debian, Ubuntu)
+
+### Install required software
 
 ### Persistent audio device number
 
