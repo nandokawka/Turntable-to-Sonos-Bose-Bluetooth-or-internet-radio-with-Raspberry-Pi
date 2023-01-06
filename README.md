@@ -43,7 +43,21 @@ harder if not impossible at the first glimpse to listen to your records on playb
 help of a docker container that creates a live internet radio stream in the
 local network from the current playing record. This internet radio stream can be consumed by any internet radio compatible device in the
 network. E.g. you can add the created internet radio stream to your smart home
-audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as any other bluetooth sound system or computer.
+audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home
+Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
+any other bluetooth sound system or computer.
+
+### Disclaimer
+
+There are already a couple of projects describing a similar approach [see
+section Inspiration](###inspiration). This project attempts to simplify the
+setup of such an internet streaming service. Through the dockerization the
+resilience is increased.
+The presented solution doesn't claim to be the audiophile's choice. Nevertheless
+it creates a suitable solution for a growing problem of connectivity problems.
+It is also an alternative for expensive solutions like the [Sonos
+Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](Bose
+Music Amplifier).
 
 ### Architecture
 
@@ -256,11 +270,19 @@ restarts anytime the host system is restarted.
    1. Configure a web radio player and point it to your stream. Your Stream url
       is `http://<local ip address of raspberry pi>:8000/turntable.mp3`
   e.g. `http://192.168.178.43:8000/turntable.mp3` e.g.:
-      1. [*Add an Internet radio station to Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos)
-      2. [*Add custom url to TuneIn*](https://help.tunein.com/what-if-i-know-a-radio-stations-streaming-url-but-its-not-on-tunein-can-i-still-listen-to-it-HkOxgcC9OwM)
-   2. Start a record on your turntable.
+      1. [*Add an Internet radio station to Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos).
+      2. [*Add custom url to TuneIn*](https://help.tunein.com/what-if-i-know-a-radio-stations-streaming-url-but-its-not-on-tunein-can-i-still-listen-to-it-HkOxgcC9OwM).
+   2. Start a record on your turntable. The ecoding of darkice causes a slight
+      delay of a few seconds. Be patient!
 
 ## Thanks to
+
+### Inspirations
+
+* [darkice-libaacplus-rpi-guide](https://github.com/basdp/USB-Turntables-to-Sonos-with-RPi)
+  by [coreyk](https://github.com/coreyk)
+* [basdp](https://github.com/coreyk/darkice-libaacplus-rpi-guide) by [basdp](https://github.com/basdp)
+* [Docker Conatiner Audio](https://leimao.github.io/blog/Docker-Container-Audio/)
 
 ### Icons used
 
