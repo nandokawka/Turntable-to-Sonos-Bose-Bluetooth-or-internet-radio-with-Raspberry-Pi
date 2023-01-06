@@ -1,4 +1,4 @@
-# Turntable to Sonos or internet radio with Raspberry Pi
+# Turntable to Smart Home Audio (Sonos, Bose) or internet radio with Raspberry Pi
 
 Create a internet radio stream that allows for streaming your records to your Sonos
 or any other internet radio endpoint like e.g. the TuneIn App on your smartphone.
@@ -10,6 +10,7 @@ or any other internet radio endpoint like e.g. the TuneIn App on your smartphone
    ```cfg
    ...
    device          = plughw:3,0 # Audio device for the audio input
+   ...
    ```
 
    See XXX for details about determining your audio device.
