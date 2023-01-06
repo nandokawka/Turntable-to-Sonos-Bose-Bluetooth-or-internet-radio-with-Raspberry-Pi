@@ -94,7 +94,7 @@ Install a linux operating system of you choice e.g.:
 3. [Ubuntu](https://ubuntu.com/download/raspberry-pi) (not tested).
 4. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
    (not tested).
-5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4 (tested).
+5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4) (tested).
 
 **Comments:**
 
@@ -121,6 +121,7 @@ Required programs and packages:
   running docker containers. Please follow the [installation
   guide](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)
   from the docker homepage.
+* [git](https://git-scm.com/)Please follow the [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from git.
 
 ### Persistent audio device number
 
@@ -154,9 +155,26 @@ card 3: CODEC [USB Audio CODEC], device 0: USB Audio [USB Audio]
   Subdevice #0: subdevice #0
 ```
 
+The example output shows 4 audio cards available on my Raspberry Pi. Relevant
+for the internet radio stream program is `card 3` as it is the audio interface
+that is connected to the record player. Unlike `card 1` `card 3` has only one
+subdevice. Darkice can be configured to listen to `card 3`
+and `subdevice 0` by editing the line starting with `device` in `config/darkice.cfg` as followed:
 
+```cfg
+...
+device          = plughw:3,0 # Audio device for the audio input
+...
+```
 
-Alsa is indexing the available audio devices randomly on every reboot. In order to configure the record streamer correctly we need to make the assigned number of our audio interface persistent. This can be done in various ways as described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page) for arch linux. The following command lists the loaded audio kernel modules.
+The `3` of `plughw:3,0` represents the card number and the `0` the subdevice. If
+you start the docker container now your stream would work until the next restart
+of the Raspberry Pi. Unfortunately alsa is indexing the available audio devices
+randomly on every reboot. In order to make the system reliable we need to make
+the numbering  audio interface persistent. This can be done in various ways as
+described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page)
+for arch linux. One approach to resolve this is to set the card number
+explicitly in the alsa configuration with the help of the kernel modules. The following command lists the loaded audio kernel modules.
 
 ```bash
 lsmod | grep snd
