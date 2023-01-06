@@ -56,7 +56,7 @@ private network. You can listen to it on any device that allows for the
 connection with an internet radio stream.
 To create a similar set you need to complete the following steps.
 
-1. Organize Hardware.
+1. [Organize Hardware](###hardware).
 2. Prepare Raspberry Pi.
 3. Make number of used audio interface persistent.
 4. Install required software.
