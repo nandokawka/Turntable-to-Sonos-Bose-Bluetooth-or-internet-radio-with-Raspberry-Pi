@@ -47,7 +47,7 @@ audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio]
 
 The pipeline begins with the record player which is connected to the USB audio
 interface (see architecture overview above). The analog signal from the current playing record travels through USB
-audio interface into the Raspberry PI. The program
+audio interface into the Raspberry Pi. The program
 [Darkice](http://www.darkice.org/) encodes the analog audio signal into a
 digital audio signal according to your configuration and sends it to a streaming
 media server. The streaming media server in this setup is
@@ -57,7 +57,7 @@ connection with an internet radio stream.
 To create a similar set you need to complete the following steps.
 
 1. Organize Hardware.
-2. Prepare Raspberry PI.
+2. Prepare Raspberry Pi.
 3. Make number of used audio interface persistent.
 4. Install required software.
 5. Configure Darkice.
@@ -71,8 +71,8 @@ To create a similar set you need to complete the following steps.
    2. If your record player has a build in phono preamp or you are using an
       external phono you can also use audio boards from
       [HifiBerry](https://www.hifiberry.com/shop/#boards) (not tested).
-3. Raspberry PI e.g.:
-   1. Raspberry PI 4 2GB Ram (tested).
+3. Raspberry Pi e.g.:
+   1. Raspberry Pi 4 2GB Ram (tested).
    2. Other versions should also work.
 4. Audio System eg.:
    1. [Sonos](https://www.sonos.com/de-de/home) including [Sonos
@@ -82,6 +82,22 @@ To create a similar set you need to complete the following steps.
    3. [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
+
+### Prepare Raspberry Pi
+
+1. Install a linux operating system of you choice e.g.:
+   1. [Raspberry Pi
+      OS](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+      (not tested).
+   2. [Debian](https://wiki.debian.org/RaspberryPi4) (not tested).
+   3. [Ubuntu](https://ubuntu.com/download/raspberry-pi) (not tested).
+   4. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
+      (not tested).
+   5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4)
+      (tested).
+   **Comment:** I used arch linux for my setup as I like the rolling-release
+   model. If you are new to linux and or to Raspberry Pi I would recommend to
+   start with a debian based system (Raspbian, Debian, Ubuntu)
 
 ### Persistent audio device number
 
@@ -110,7 +126,7 @@ Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-so
 
 <a href="https://www.flaticon.com/de/kostenlose-icons/vinyl" title="vinyl Icons">Vinyl Icons erstellt von Pavel Kozlov - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/speaker" title="speaker icons">Speaker icons created by Smashicons - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/raspberry-pi" title="raspberry pi icons">Raspberry pi icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/raspberry-pi" title="Raspberry Pi icons">Raspberry Pi icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop
 icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/audio" title="audio icons">Audio icons created by Andrejs Kirma - Flaticon</a>
