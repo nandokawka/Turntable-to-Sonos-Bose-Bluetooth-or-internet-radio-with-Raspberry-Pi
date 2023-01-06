@@ -85,17 +85,18 @@ To create a similar set you need to complete the following steps.
 
 ### Prepare Raspberry Pi
 
-1. Install a linux operating system of you choice e.g.:
-   1. [Raspberry Pi
-      OS](https://www.raspberrypi.com/documentation/computers/getting-started.html)
-      (not tested).
-   2. [Debian](https://wiki.debian.org/RaspberryPi4) (not tested).
-   3. [Ubuntu](https://ubuntu.com/download/raspberry-pi) (not tested).
-   4. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
-      (not tested).
-   5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4)
-      (tested).  
-   **Comment:** I used arch linux for my setup as I like the rolling-release
+Install a linux operating system of you choice e.g.:
+
+1. [Raspberry Pi
+   OS](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+   (not tested).
+2. [Debian](https://wiki.debian.org/RaspberryPi4) (not tested).
+3. [Ubuntu](https://ubuntu.com/download/raspberry-pi) (not tested).
+4. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
+   (not tested).
+5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4 (tested).
+
+**Comment:** I used arch linux for my setup as I like the rolling-release
    model. If you are new to linux and or to Raspberry Pi I would recommend to
    start with a debian based system (Raspbian, Debian, Ubuntu)
 
