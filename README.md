@@ -34,7 +34,7 @@ harder if not impossible at the first glimpse to listen to your records on playb
 help of a docker container that creates a live internet radio stream in the
 local network from the current playing record. This internet radio stream can be consumed by any internet radio compatible device in the
 network. E.g. you can add the created internet radio stream to your smart home
-audio system from Sonos of Bose as well as any other bluetooth sound system or computer.
+audio system from Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as any other bluetooth sound system or computer.
 
 ### Architecture overview
 
@@ -55,8 +55,7 @@ audio system from Sonos of Bose as well as any other bluetooth sound system or c
       App](https://apps.apple.com/de/app/sonos/id1488977981?l=en) (tested).
    2. Any Bluetooth speaker plus internet radio app e.g.
       [TuneIn](https://tunein.com/) (tested) or similar.
-   3. [Bose Home
-      Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
+   3. [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
 
