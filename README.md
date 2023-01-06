@@ -28,6 +28,8 @@ smartphone.
 The numbering of the audio devices is not deterministic and changes randomly
 after a restart.
 
+[[_TOC_]]
+
 ## Setup and configuration
 
 ### Concept
@@ -41,9 +43,26 @@ local network from the current playing record. This internet radio stream can be
 network. E.g. you can add the created internet radio stream to your smart home
 audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as any other bluetooth sound system or computer.
 
-### Architecture overview
+### Architecture
 
-**Hardware:**
+The pipeline begins with the record player which is connected to the USB audio
+interface (see architecture overview above). The analog signal from the current playing record travels through USB
+audio interface into the Raspberry PI. The program
+[Darkice](http://www.darkice.org/) encodes the analog audio signal into a
+digital audio signal according to your configuration and sends it to a streaming
+media server. The streaming media server in this setup is
+[Icecast](https://icecast.org/). It creates a internet radio station in your
+private network. You can listen to it on any device that allows for the
+connection with an internet radio stream.
+To create a similar set you need to complete the following steps.
+
+1. Organize Hardware.
+2. Prepare Raspberry PI.
+3. Make number of used audio interface persistent.
+4. Install required software.
+5. Configure Darkice.
+
+### Hardware
 
 1. Record player with stereo out.
 2. USB Audio interface with phono preamp e.g.:
@@ -64,14 +83,10 @@ audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio]
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
 
-The pipeline begins with the record player which is connected to the USB audio
-interface. The analog signal from the current playing record travels through USB
-audio interface into the Raspberry PI. The program
-[Darkice](http://www.darkice.org/) encodes the analog audio signal into a
-digital audio signal according to your configuration and sends it to a streaming
-media server. The streaming media server in this setup is
-[Icecast](https://icecast.org/). It creates a internet radio station in your
-private network.
+####
+
+#####
+
 
 ### Persistent audio device number
 
