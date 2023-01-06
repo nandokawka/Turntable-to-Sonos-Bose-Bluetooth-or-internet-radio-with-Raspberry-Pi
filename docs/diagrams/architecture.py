@@ -11,12 +11,13 @@ with Diagram('\nSetup of Turntable to Sonos or Web Radio with Raspberry Pi', sho
   
   with Cluster("Household"):
     Node("", shape="plaintext", pin="true", pos="0.5,0.5")
-    Node("", shape="plaintext", pin="true", pos="16.5,5.5")
+    Node("", shape="plaintext", pin="true", pos="19.5,5.5")
     record_player = Custom("Record player", "./png/schallplattenspieler.png", pin="true", pos="1,3")
-    audio_device = Custom("Audio device", "./png/usb.png",  pin="true", pos="5,3")
-    sonos = Custom("Sonos System", "./png/speaker.png", pin="true", pos="16,5")
-    speaker = Custom("BT Speaker", "./png/speaker.png", pin="true", pos="16,3")
-    laptop = Custom("Laptop", "./png/laptop.png", pin="true", pos="16,1")
+    audio_device = Custom("Audio device", "./png/usb.png", pin="true", pos="5,3")
+    audio = Custom("Smartphone", "./png/audio.png", pin="true", pos="16,3")
+    sonos = Custom("Sonos System", "./png/speaker.png", pin="true", pos="19,5")
+    speaker = Custom("BT Speaker", "./png/speaker.png", pin="true", pos="19,3")
+    laptop = Custom("Laptop", "./png/laptop.png", pin="true", pos="19,1")
 
   with Cluster("Raspberry PI", graph_attr={"bgcolor": "thistle"}):
     Node("", shape="plaintext", pin="true", pos="7.4,5")
@@ -33,4 +34,6 @@ with Diagram('\nSetup of Turntable to Sonos or Web Radio with Raspberry Pi', sho
   # Edge(headlabel="analog audio signal", labelangle="0", labeldistance="14", constraint="False") >> audio_device
   audio_device >> darkice
   darkice >>  Edge(label="encoded audio") >> icecast
-  icecast >> Edge(label="mp3 stream") >> [sonos, laptop, speaker]
+  icecast >> Edge(label="mp3 stream") >> audio
+  audio >> [sonos, laptop, speaker]
+  
