@@ -53,8 +53,8 @@ digital audio signal according to your configuration and sends it to a streaming
 media server. The streaming media server in this setup is
 [Icecast](https://icecast.org/). It creates a internet radio station in your
 private network. You can listen to it on any device that allows for the
-connection with an internet radio stream.
-To create a similar set you need to complete the following steps.
+connection with an internet radio stream.  
+To create a similar set up the following steps need to be completed:
 
 1. [Organize Hardware](###hardware).
 2. [Prepare Raspberry Pi](###prepare-raspberry-pi).
@@ -96,15 +96,67 @@ Install a linux operating system of you choice e.g.:
    (not tested).
 5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4 (tested).
 
-**Comment:** I used arch linux for my setup as I like the rolling-release
-   model. If you are new to linux and or to Raspberry Pi I would recommend to
-   start with a debian based system (Raspbian, Debian, Ubuntu)
+**Comments:**
+
+1. I used arch linux for my setup as I like the rolling-release
+   approach. If you are new to linux and or to Raspberry Pi I would recommend to
+   start with a debian based system like Raspbian, Debian or Ubuntu as the
+   explanations are mostly very comprehensible.
+2. If you don't know how to access the your Raspberry Pi remotely the following
+   guide might give you a good starting point [*Connect to your Raspberry Pi with
+   ssh*](https://www.raspberrypi.com/documentation/computers/remote-access.html).
+   I would like to encourage you to research this part on your own and keep
+   following this guide after you have access to your Raspberry Pi's terminal.
 
 ### Install required software
 
+Required programs and packages:
+
+* [Alsa](https://wiki.debian.org/ALSA): API for audio device drivers. No
+  installation required as alsa is part of the Linux Kernel.
+* [Docker Engine](https://www.docker.com/): Program that allows you to run docker
+  containers on your system. Please follow the [installation guide](https://docs.docker.com/engine/install/) from the
+  docker homepage.
+* [Docker Compose](https://docs.docker.com/compose/): Tool for defining and
+  running docker containers. Please follow the [installation
+  guide](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)
+  from the docker homepage.
+
 ### Persistent audio device number
 
-As alsa is indexing the available audio devices randomly on every reboot. In order to configure the record streamer correctly we need to make the assigned number of our audio interface persistent. This can be done in various ways as described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page) for arch linux. The following command lists the loaded audio kernel modules.
+To configure our internet radio stream correctly it is required to inform
+darkice about the source of the audio signal that needs to be encoded. The
+command `aplay -l` displays a list of known audio devices.
+
+```bash
+sudo aplay -l
+
+# Example output:
+**** List of PLAYBACK Hardware Devices ****
+card 0: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 1: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: vc4hdmi1 [vc4-hdmi-1], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 3: CODEC [USB Audio CODEC], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+```
+
+
+
+Alsa is indexing the available audio devices randomly on every reboot. In order to configure the record streamer correctly we need to make the assigned number of our audio interface persistent. This can be done in various ways as described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page) for arch linux. The following command lists the loaded audio kernel modules.
 
 ```bash
 lsmod | grep snd
