@@ -41,10 +41,37 @@ Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-so
 or add it to any other web radio application on your smartphone. The latter one
 allows you to listen to your records on any connected bluetooth speakers.
 
-### Setup overview
+### Architecture overview
+
+**Hardware:**
+
+1. Record player with stereo out.
+2. USB Audio interface with phono preamp e.g.:
+   1. [Behringer U-PHONE
+      UFO202](https://www.amazon.de/-/en/gp/product/B002GHBYZ0/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1) (tested).
+   2. If your record player has a build in phono preamp or you are using an
+      external phono you can also use audio boards from
+      [HifiBerry](https://www.hifiberry.com/shop/#boards) (not tested).
+3. Raspberry PI e.g.:
+   1. Raspberry PI 4 2GB Ram (tested).
+   2. Other versions should also work.
+4. Audio System eg.:
+   1. [Sonos](https://www.sonos.com/de-de/home) including [Sonos
+      App](https://apps.apple.com/de/app/sonos/id1488977981?l=en) (tested).
+   2. Any Bluetooth speaker plus web radio app e.g.
+      [TuneIn](https://tunein.com/) (tested) or similar.
 
 ![architecture](./docs/diagrams/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
 "Architecture")
+
+The pipeline begins with the record player which is connected to the USB audio
+interface. The analog signal from the current playing record travels through USB
+audio interface into the Raspberry PI. The program
+[Darkice](http://www.darkice.org/) encodes the analog audio signal into a
+digital audio signal according to your configuration and sends it to a streaming
+media server. The streaming media server in this setup is
+[Icecast](https://icecast.org/). It creates a internet radio station in your
+private network.
 
 ### Persistent audio device number
 
@@ -67,4 +94,6 @@ options snd_usb_audio index=3
 <a href="https://www.flaticon.com/de/kostenlose-icons/vinyl" title="vinyl Icons">Vinyl Icons erstellt von Pavel Kozlov - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/speaker" title="speaker icons">Speaker icons created by Smashicons - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/raspberry-pi" title="raspberry pi icons">Raspberry pi icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop
+icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/audio" title="audio icons">Audio icons created by Andrejs Kirma - Flaticon</a>
