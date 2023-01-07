@@ -118,20 +118,17 @@ To create a similar set up the following steps need to be completed:
 
 Install a linux operating system of you choice e.g.:
 
-1. [Raspberry Pi
-   OS](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+1. [Debian](https://wiki.debian.org/RaspberryPi4) (not tested).
+2. [Ubuntu](https://ubuntu.com/download/raspberry-pi) (not tested).
+3. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
    (not tested).
-2. [Debian](https://wiki.debian.org/RaspberryPi4) (not tested).
-3. [Ubuntu](https://ubuntu.com/download/raspberry-pi) (not tested).
-4. [CentOS](https://medium.com/@gk.mr/installing-centos-in-raspberry-pi-4-94566309e59f)
-   (not tested).
-5. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4) (tested).
+4. [Arch](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4) (tested).
 
 **Comments:**
 
 1. I used arch linux for my setup as I like the rolling-release
    approach. If you are new to linux and or to Raspberry Pi I would recommend to
-   start with a debian based system like Raspbian, Debian or Ubuntu as the
+   start with a debian based system like Debian or Ubuntu as the
    explanations are mostly very comprehensible.
 2. If you don't know how to access the your Raspberry Pi remotely the following
    guide might give you a good starting point [*Connect to your Raspberry Pi with
