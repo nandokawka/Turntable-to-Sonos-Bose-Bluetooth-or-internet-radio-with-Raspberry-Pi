@@ -111,8 +111,7 @@ To create a similar set up the following steps need to be completed:
 | SD Card 16GB         | 10,00 € |
 | Case                 | 15,00 € |
 | USB Audio Interface  | 24,00 € |
-|                      |         |
-| Total:               | 99,00 € |
+| **Total:**           | **99,00 €** |
 
 
 ### Prepare Raspberry Pi
