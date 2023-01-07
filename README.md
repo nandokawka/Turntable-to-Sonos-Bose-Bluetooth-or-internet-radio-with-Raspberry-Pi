@@ -232,7 +232,7 @@ connected to follow the steps described below:
    ```
 
 The USB audio device is using the module `snd_usb_audio`. For the sake
-of simplicity I configured alsa such that the USB audio device is the last card of
+of simplicity configure alsa such that the USB audio device is the last card of
 the connected cards by editing `/etc/modprobe.d/alsa-base.conf` and set the
 index of the card using the module `snd_usb_audio` to 3:
 
