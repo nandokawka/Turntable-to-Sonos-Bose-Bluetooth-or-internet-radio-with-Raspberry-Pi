@@ -1,8 +1,7 @@
 # Turntable to Smart Home Audio (Sonos, Bose) or internet radio with Raspberry Pi
 
-Create a internet radio stream that allows for streaming your records to your Sonos
-or any other internet radio endpoint like e.g. the TuneIn App on your
-smartphone.
+Create an internet radio stream that allows for streaming your records to your
+Smart Home Audio System or any other internet radio capable endpoint.
 
 ![architecture](./img/setup_of_turntable_to_sonos_or_web_radio_with_raspberry_pi.png
 "Architecture")
@@ -26,7 +25,7 @@ smartphone.
    ```
 
 The numbering of the audio devices is not deterministic and changes randomly
-after a restart.
+on reboot.
 
 ## Table of Contents
 
@@ -34,27 +33,27 @@ after a restart.
 
 ## Concept
 
-The audio hardware in the households changes drastically and makes use of
-technologies like bluetooth or wireless streaming. This goes along with the
-removal of physical connectors on the audio devices. As a consequence it becomes
-harder if not impossible at the first glimpse to listen to your records on playback devices in your household. This project tackles the problem with the
-the creation of a live internet radio stream in the
-local network from the current playing record. The internet radio stream can be consumed by any internet radio compatible device in the
+The audio systems in modern households are changing drastically and use
+technologies like Bluetooth or wireless streaming. Additionally, physical
+connectors are getting removed from the audio equipment. The missing connectors
+make it harder to connect your record player and listen to your favorite records. This project tackles the problem through the
+creation of a live internet radio stream in the
+local network from the current playing record. The internet radio stream can be consumed by any internet radio compatible endpoint in the
 network. E.g. you can add the created internet radio stream to your smart home
 audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home
 Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
-any other bluetooth sound system or computer.
+any other Bluetooth sound system or computer.
 
 ## Disclaimer
 
 There are already a couple of projects describing a similar approach [see
 section Inspiration](###inspiration). This project attempts to simplify the
-setup of such an internet streaming service. Additionally the reilience is
+setup of such an internet streaming service. The resilience is
 increased through dockerization.  
 The presented solution doesn't claim to be the audiophile's choice. Nevertheless
-it creates a suitable solution for the growing connectivity problems with modern
+it creates a suitable solution for connectivity problems with modern
 audio systems.  
-It can also be an alternative for expensive solutions like the [Sonos
+It can also be an alternative to expensive solutions like the [Sonos
 Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](Bose
 Music Amplifier).
 
@@ -63,13 +62,14 @@ Music Amplifier).
 ### Architecture
 
 The pipeline begins with the record player which is connected to the USB audio
-interface (see architecture overview above). The analog signal from the current playing record travels through USB
+interface (see architecture overview above). The analog signal from the current
+playing record travels through the USB
 audio interface into the Raspberry Pi. The program
 [Darkice](http://www.darkice.org/) encodes the analog audio signal into a
 digital audio signal according to your configuration and sends it to a streaming
 media server. The streaming media server in this setup is
-[Icecast](https://icecast.org/). It creates a internet radio station in your
-private network. You can listen to it on any device that allows for the
+[Icecast](https://icecast.org/). It creates an internet radio station in your
+private network. You can listen to it on any device that allows for a
 connection with an internet radio stream.  
 To create a similar set up the following steps need to be completed:
 
@@ -101,6 +101,19 @@ To create a similar set up the following steps need to be completed:
    3. [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) (not
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
+
+*Example Costs*:
+
+| Hardware             | Price   |
+| -------------------- | ------- |
+| Raspberry Pi 4 B 2GB | 40,00 € |
+| Power Supply         | 10,00 € |
+| SD Card 16GB         | 10,00 € |
+| Case                 | 15,00 € |
+| USB Audio Interface  | 24,00 € |
+|                      |         |
+| Total:               | 99,00 € |
+
 
 ### Prepare Raspberry Pi
 
