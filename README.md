@@ -1,4 +1,4 @@
-# Turntable to Smart Home Audio (Sonos, Bose) or internet radio with Raspberry Pi
+# Turntable to Sonos, Bose, Bluetooth or internet radio with Raspberry Pi
 
 Create an internet radio stream that allows for streaming your records to your
 Smart Home Audio System or any other internet radio capable endpoint.
@@ -102,7 +102,7 @@ To create a similar set up the following steps need to be completed:
       tested) including [Bose Music
       APP](https://www.bose.de/de_de/apps/bose_music.html) (not tested).
 
-*Example Costs*:
+*Example Hardware Costs*:
 
 | Hardware             | Price   |
 | -------------------- | ------- |
@@ -112,7 +112,6 @@ To create a similar set up the following steps need to be completed:
 | Case                 | 15,00 € |
 | USB Audio Interface  | 24,00 € |
 | **Total:**           | **99,00 €** |
-
 
 ### Prepare Raspberry Pi
 
