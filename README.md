@@ -130,7 +130,7 @@ Install a linux operating system of you choice e.g.:
    approach. If you are new to linux and or to Raspberry Pi I would recommend to
    start with a debian based system like Debian or Ubuntu as the
    explanations are mostly very comprehensible.
-2. If you don't know how to access the your Raspberry Pi remotely the following
+2. If you don't know how to access the your Raspberry Pi remotely with SSH the following
    guide might give you a good starting point [*Connect to your Raspberry Pi with
    ssh*](https://www.raspberrypi.com/documentation/computers/remote-access.html).
    I would like to encourage you to research this part on your own and keep
@@ -153,8 +153,8 @@ Required programs and packages:
 
 ### Persistent audio device number
 
-To configure our internet radio stream correctly it is required to inform
-darkice about the source of the audio signal that needs to be encoded. The
+To configure our internet radio stream it is required to inform
+Darkice about the source of the audio signal that needs to be encoded. The
 command `aplay -l` displays a list of known audio devices.
 
 ```bash
@@ -183,7 +183,7 @@ card 3: CODEC [USB Audio CODEC], device 0: USB Audio [USB Audio]
   Subdevice #0: subdevice #0
 ```
 
-The example output shows 4 audio cards available on my Raspberry Pi. Relevant
+The example output displays 4 audio cards available on the Raspberry Pi. Relevant
 for the internet radio stream program is `card 3` as it is the audio interface
 that is connected to the record player. Unlike `card 1` `card 3` has only one
 subdevice. Darkice can be configured to listen to `card 3`
@@ -198,8 +198,8 @@ device          = plughw:3,0 # Audio device for the audio input
 The `3` of `plughw:3,0` represents the card number and the `0` the subdevice. If
 you start the docker container now your stream would work until the next restart
 of the Raspberry Pi. Unfortunately alsa is indexing the available audio devices
-randomly on every reboot. In order to make the system reliable we need to make
-the numbering  audio interface persistent. This can be done in various ways as
+randomly on every reboot. In order to make the system reliable it is necessary to make
+the numbering of the audio interface persistent. This can be done in various ways as
 described [here](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#top-page)
 for arch linux. One approach to resolve this is to set the card number
 explicitly in the alsa configuration with the help of the kernel modules.To
@@ -232,8 +232,8 @@ connected to follow the steps described below:
    mc                     61440  4 videodev,snd_usb_audio,videobuf2_v4l2,videobuf2_common
    ```
 
-I assumed that my audio device is using the module `snd_usb_audio`. For the sake
-of simplicity I configured alsa such that the audio device is the last card of
+The USB audio device is using the module `snd_usb_audio`. For the sake
+of simplicity I configured alsa such that the USB audio device is the last card of
 the connected cards by editing `/etc/modprobe.d/alsa-base.conf` and set the
 index of the card using the module `snd_usb_audio` to 3:
 
@@ -276,13 +276,13 @@ restarts anytime the host system is restarted.
 
   ![Icecast interface](./img/icecast-interface.png "Icecast Interface")
 
-2. Try to listen to your local internet radio stream.
+2. Try to listen to your record.
    1. Configure a web radio player and point it to your stream. Your Stream url
       is `http://<local ip address of raspberry pi>:8000/turntable.mp3`
   e.g. `http://192.168.178.43:8000/turntable.mp3`:
       1. [*Add an Internet radio station to Sonos*](https://support.sonos.com/en/article/add-an-internet-radio-station-to-sonos).
       2. [*Add custom url to TuneIn*](https://help.tunein.com/what-if-i-know-a-radio-stations-streaming-url-but-its-not-on-tunein-can-i-still-listen-to-it-HkOxgcC9OwM).
-   2. Start a record on your turntable. The ecoding of darkice causes a slight
+   2. Start a record on your turntable. The encoding of Darkice causes a slight
       delay of a few seconds. Be patient!
 
 ## Thanks to
