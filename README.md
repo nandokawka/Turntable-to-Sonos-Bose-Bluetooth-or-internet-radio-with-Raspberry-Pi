@@ -149,7 +149,7 @@ Required programs and packages:
   running docker containers. Please follow the [installation
   guide](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)
   from the docker homepage.
-* [git](https://git-scm.com/)Please follow the [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from git.
+* [git](https://git-scm.com/): Please follow the [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from git.
 
 ### Persistent audio device number
 
