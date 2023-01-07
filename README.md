@@ -284,6 +284,8 @@ restarts anytime the host system is restarted.
    2. Start a record on your turntable. The encoding of Darkice causes a slight
       delay of a few seconds. Be patient!
 
+**Have fun!**
+
 ## Thanks to
 
 ### Inspirations
