@@ -36,8 +36,7 @@ make it harder to connect your record player and listen to your favorite records
 creation of a live internet radio stream in the
 local network from the current playing record. The internet radio stream can be consumed by any internet radio compatible endpoint in the
 network. E.g. you can add the created internet radio stream to your smart home
-audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home
-Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
+audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
 any other Bluetooth sound system or computer.
 
 ## Disclaimer
