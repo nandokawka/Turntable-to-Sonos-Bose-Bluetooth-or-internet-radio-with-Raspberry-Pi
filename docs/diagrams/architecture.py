@@ -27,7 +27,7 @@ with Diagram('\nSetup of Turntable to Sonos or Web Radio with Raspberry Pi', sho
       fontsize="6", loc="t",
       fixedsize="true", width="1", height="1", 
       pin="true", pos="9.8,4.5")
-    darkice = Custom("Darkice", "./png/icecast-bw.png", pin="true", pos="8,3")
+    darkice = Custom("Darkice", "./png/darkice.png", pin="true", pos="8,3")
     icecast = Custom("Icecast", "./png/icecast-bw.png", pin="true", pos="12,3")
 
   record_player >> Edge(label="analog audio") >> audio_device
