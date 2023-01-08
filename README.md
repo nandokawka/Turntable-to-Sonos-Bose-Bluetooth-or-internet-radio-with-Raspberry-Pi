@@ -16,7 +16,7 @@ Smart Home Audio System or any other internet radio capable endpoint.
    ...
    ```
 
-   See XXX for details about determining your audio device.
+   See section [Persistent audio device number](###persistent-audio-device-number) for details about determining your audio device.
 
 2. Start docker container.
 
