@@ -27,10 +27,6 @@ Smart Home Audio System or any other internet radio capable endpoint.
 The numbering of the audio devices is not deterministic and changes randomly
 on reboot.
 
-## Table of Contents
-
-[[_TOC_]]
-
 ## Concept
 
 The audio systems in modern households are changing drastically and use
@@ -54,8 +50,7 @@ The presented solution doesn't claim to be the audiophile's choice. Nevertheless
 it creates a suitable solution for connectivity problems with modern
 audio systems.  
 It can also be an alternative to expensive solutions like the [Sonos
-Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](Bose
-Music Amplifier).
+Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](https://www.bose.com/en_us/products/speakers/amplifiers/bose-music-amplifier.html#v=bose_music_amplifier_black_eu).
 
 ## Setup and configuration
 
