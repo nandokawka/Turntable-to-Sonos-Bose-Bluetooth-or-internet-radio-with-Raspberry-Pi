@@ -292,7 +292,7 @@ restarts anytime the host system is restarted.
 
 * [darkice-libaacplus-rpi-guide](https://github.com/basdp/USB-Turntables-to-Sonos-with-RPi)
   by [coreyk](https://github.com/coreyk)
-* [basdp](https://github.com/coreyk/darkice-libaacplus-rpi-guide) by [basdp](https://github.com/basdp)
+* [darkice-libaacplus-rpi-guide](https://github.com/coreyk/darkice-libaacplus-rpi-guide) by [basdp](https://github.com/basdp)
 * [Docker Conatiner
   Audio](https://leimao.github.io/blog/Docker-Container-Audio/) by [leimao](https://leimao.github.io/)
 
