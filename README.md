@@ -27,10 +27,6 @@ Smart Home Audio System or any other internet radio capable endpoint.
 The numbering of the audio devices is not deterministic and changes randomly
 on reboot.
 
-## Table of Contents
-
-[[_TOC_]]
-
 ## Concept
 
 The audio systems in modern households are changing drastically and use
@@ -40,8 +36,7 @@ make it harder to connect your record player and listen to your favorite records
 creation of a live internet radio stream in the
 local network from the current playing record. The internet radio stream can be consumed by any internet radio compatible endpoint in the
 network. E.g. you can add the created internet radio stream to your smart home
-audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home
-Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
+audio system from [Sonos](https://www.sonos.com/de-de/home) or [Bose Home Audio](https://www.bose.com/en_us/products/speakers/smart_home.html) as well as
 any other Bluetooth sound system or computer.
 
 ## Disclaimer
@@ -54,8 +49,7 @@ The presented solution doesn't claim to be the audiophile's choice. Nevertheless
 it creates a suitable solution for connectivity problems with modern
 audio systems.  
 It can also be an alternative to expensive solutions like the [Sonos
-Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](Bose
-Music Amplifier).
+Amp](https://www.sonos.com/en-us/shop/amp) or the [Bose Music Amplifier](https://www.bose.com/en_us/products/speakers/amplifiers/bose-music-amplifier.html#v=bose_music_amplifier_black_eu).
 
 ## Setup and configuration
 
