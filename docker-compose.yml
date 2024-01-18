@@ -5,7 +5,8 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    restart: unless-stopped
+    restart: on-failure:2
+    #restart: unless-stopped
     ports:
       - "8000:8000"
     devices:
@@ -13,4 +14,6 @@ services:
     volumes:
       - ./config/icecast.xml:/etc/icecast.xml
       - ./config/darkice.cfg:/etc/darkice.cfg
+      - ./logs/icecast/error.log:/var/log/icecast/error.log
+      - ./logs/icecast/access.log:/var/log/icecast/access.log
 
